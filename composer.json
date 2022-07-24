@@ -1,0 +1,44 @@
+{
+    "name": "eliberiosoft/sso-key-manager",
+    "description": "sso key manager",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Eliberiosoft\\SsoKeyManager\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ernesto Liberio",
+            "email": "ernesto.liberio@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "ext-sodium": "*",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.6",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Eliberiosoft\\SsoKeyManager\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Eliberiosoft\\SsoKeyManager\\SsoKeyManagerServiceProvider"
+            ]
+        }
+    }
+}

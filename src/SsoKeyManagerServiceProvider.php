@@ -16,7 +16,8 @@ class SsoKeyManagerServiceProvider extends ServiceProvider
     {
         $configArray = include __DIR__.'/../resources/config.php';
         Config::set('database.connections', array_merge(Config::get('database.connections'), [$configArray['connection'] => $configArray['config']]));
-        Config::set('database.sso_manager', ['table' => $configArray['table'], 'connection' => $configArray['connection']]);
+        Config::set('database.sso_manager', ['app-id'=>$configArray['app-id'],'table' => $configArray['table'], 'connection' => 
+$configArray['connection']]);
 
         if ($this->app->runningInConsole()) {
             $this->commands([

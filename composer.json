@@ -18,10 +18,6 @@
         "ext-sodium": "*",
         "ext-json": "*"
     },
-    "require-dev": {
-        "orchestra/testbench": "^7.6",
-        "phpunit/phpunit": "^9.5"
-    },
     "autoload-dev": {
         "psr-4": {
             "Eliberiosoft\\SsoKeyManager\\Tests\\": "tests"
